@@ -6,16 +6,25 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Convecter App.");
-        System.out.println("App for measures converting");
+        System.out.println("Version 1.0");
+
 
 
         double kgs = 5;
+        double pnds = 12;
         double pounds = convKgsToPounds(kgs);
-        System.out.println("Result is "+pounds+" pounds.");
+        double kilos = convPoundsToKgs(pnds);
+        System.out.println("Result is "+pounds+" pounds and "+ kilos+ "kgs");
 
     }
 
     private static double convKgsToPounds(double kgs){
+
         return kgs*CONV_K;
+    }
+
+    private static double convPoundsToKgs(double pnds){
+
+        return pnds/CONV_K;
     }
 }
